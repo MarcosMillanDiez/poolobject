@@ -1,4 +1,4 @@
-e/**
+/**
  * 
  */
 package ubu.gii.dass.test.c01;
