@@ -15,12 +15,13 @@ import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
- * @author Marcos Mill�n
+ * @author Marcos Millan
  * @author Mario Santamaria
  *
  */
 public class ReusablePoolTest {
 
+	//Variables
 	ReusablePool pool1;
 	ReusablePool pool2;
 
