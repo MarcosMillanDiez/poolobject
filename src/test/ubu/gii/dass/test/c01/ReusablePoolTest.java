@@ -9,26 +9,17 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import ubu.gii.dass.c01.Reusable;
-import ubu.gii.dass.c01.ReusablePool;
-
 /**
  * @author alumno
  *
  */
 public class ReusablePoolTest {
 
-	ReusablePool pool1; 
-	ReusablePool pool2;
-		
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
-		pool1= ReusablePool.getInstance(); 
-		pool2= ReusablePool.getInstance(); 
-		
 	}
 
 	/**
@@ -41,12 +32,9 @@ public class ReusablePoolTest {
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#getInstance()}.
 	 */
-	
 	@Test
 	public void testGetInstance() {
-		assertTrue(pool1.getInstance());
-		assertTrue(pool1 == pool2);
-		
+		fail("Not yet implemented");
 	}
 
 	/**
@@ -62,8 +50,7 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testReleaseReusable() {
-		
-		
+		fail("Not yet implemented");
 	}
 
 }
