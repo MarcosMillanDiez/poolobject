@@ -9,17 +9,26 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.ReusablePool;
+
 /**
- * @author alumno
+ * @author Marcos Millán 
+ * @author Mario Santamaria
  *
  */
 public class ReusablePoolTest {
 
+	ReusablePool pool1;
+	ReusablePool pool2;
+	
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		pool1 = ReusablePool.getInstance();
+		pool2 = ReusablePool.getInstance();
+
 	}
 
 	/**
