@@ -12,7 +12,7 @@ import org.junit.Test;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
- * @author Marcos Millán 
+ * @author Marcos Millï¿½n 
  * @author Mario Santamaria
  *
  */
@@ -43,7 +43,9 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+		assertTrue(pool1 instanceof ReusablePool);
+		assertTrue(pool2 instanceof ReusablePool);
+		assertTrue(pool1.equals(pool2));
 	}
 
 	/**
