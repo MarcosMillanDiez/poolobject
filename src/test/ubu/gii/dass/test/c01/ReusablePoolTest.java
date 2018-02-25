@@ -9,7 +9,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import ubu.gii.dass.c01.DuplicatedInstanceException;
 import ubu.gii.dass.c01.NotFreeInstanceException;
+import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
 
 /**
@@ -74,8 +76,38 @@ public class ReusablePoolTest {
 	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
-	public void testReleaseReusable() {
-		fail("Not yet implemented");
+	public void testReleaseReusable() throws NotFreeInstanceException {
+		Reusable x1 = pool1.acquireReusable();
+		Reusable x2 = pool1.acquireReusable();
+		
+		try {
+			pool1.releaseReusable(x1);
+		}catch(DuplicatedInstanceException e) {
+			System.err.println("No se ha devuelto el resultado.");
+			assertTrue(false);
+		}
+		
+		try {
+			pool1.releaseReusable(x2);
+		}catch(DuplicatedInstanceException e) {
+			System.err.println("No se ha devuelto el resultado.");
+			assertTrue(false);
+		}
+		
+		try {
+			pool1.releaseReusable(x1);
+			assertTrue(false);
+		}catch(DuplicatedInstanceException e) {
+			assertTrue(true);
+		}
+		
+		try {
+			pool1.releaseReusable(x2);
+			assertTrue(false);
+		}catch(DuplicatedInstanceException e) {
+			assertTrue(true);
+		}
+		
 	}
 
 }
